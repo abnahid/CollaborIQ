@@ -1,0 +1,142 @@
+
+Assignment Category 01
+
+Welcome to Job Assessment by BJET Inc.
+
+We're currently in search of a talented junior MERN stack developer to join our team in Japan. As a junior member, you'll have the opportunity to work closely with our experienced developers on exciting projects utilizing MongoDB, Express.js, React, and Node.js.
+
+This role offers an excellent chance for growth, where you'll be able to enhance your skills while contributing to the development of innovative web applications. We're seeking someone with a solid foundation in web development and a passion for learning new technologies. If you're enthusiastic about building dynamic and user-friendly applications and eager to kick-start your career in the MERN stack environment, we'd love to hear from you.
+
+We invite you to complete this job assessment to prove your skill.
+
+Website Theme: ⭐ Online Group-Study Assignment
+
+In this assignment, you will build a web application for online group study with friends (Every registered user is a friend of others). Users can create assignments, complete them, and grade their friends' assignments.
+
+Ensure the Following to Get a 100% Mark:
+
+- Include at least 15 meaningful commits on the client side and 8 meaningful commits on the server side with descriptive messages.
+- Include a README file with the project name, purpose, live URL, key features, and any npm packages you have used.
+- Ensure the website is fully responsive on mobile, tablet, and desktop.
+- Secure Firebase configuration keys using environment variables.
+- Secure your MongoDB credentials using the environment variable.
+- Create a design that encourages recruiters. Ensure pleasing color contrast, proper alignment, and spacing. Avoid "gobindo" design.
+
+Deployment Guideline:
+
+- If your deployment isn't functional, you will get 0 and may miss future rewards.
+- Ensure your server works perfectly on production with no CORS/404/504 errors.
+- Ensure your live link works perfectly without errors on reload or landing.
+- ⚠️ Add your domain for authorization to Firebase if using Netlify/Surge.
+- ⚠️ Logged-in users must not redirect to the login page upon reloading private routes.
+
+Layout & Page Structure:
+
+Navbar:
+- Website Name/Logo: Reflect the theme.✅
+- Menu Options:
+  - Assignments✅
+  - Conditional Login/Logout:
+    - If not logged in, show a Login button.✅
+    - If logged in, show the user's profile picture and Logout button.✅
+  - On hovering over the profile picture, display the user’s name.✅
+
+Main Section:
+- Display different pages based on routes.
+
+Footer:
+- Include relevant information with an eye-catching design.✅
+
+Authentication System:
+
+Login Page:
+- Use email/password-based authentication.✅
+- Google or GitHub social login.✅
+- Include a link redirecting to the Register page.✅
+
+Register Page:
+- Input fields: Name, Email, photoURL, Password.✅
+- Redirect link to the Login page.✅
+- Password Requirements:
+  - At least one uppercase letter.✅
+  - At least one lowercase letter.✅
+  - Minimum of 6 characters.✅
+- Show error messages using toast/sweet alert for invalid inputs.✅
+
+Pages & Functionalities:
+
+1. Home Page (Public):
+   - Banner Section: Design it based on the project theme.✅
+   - Feature Section: Showcase application features.
+   - FAQ Section: Frequently asked questions about the application.✅
+
+2. Create Assignment Page (Private):
+   - Fields:
+     - Title
+     - Description
+     - Marks
+     - Thumbnail Image URL
+     - Assignment Difficulty Level (Dropdown: Easy, Medium, Hard)
+     - Due Date (use "react-datepicker")
+   - Show a success message on successful creation.
+
+3. Assignments Page (Public):
+   - Display all assignments in a card layout with:
+     - Title
+     - Marks
+     - Difficulty Level
+     - Buttons for Delete, Update, and View Assignment.
+   - Delete: Only allowed for the creator. Show a confirmation modal.
+   - Update: Pre-filled fields for updating the assignment.
+   - View: Redirect to assignment details with a "Take Assignment" button.
+
+4. My Submitted/Attempted Assignments (Private):
+   - Display only the user’s submitted assignments with:
+     - Title
+     - Status
+     - Marks
+     - Feedback
+
+5. Pending Assignments (Private):
+   - Show pending assignments (not marked yet).
+   - Include:
+     - Title
+     - Marks
+     - Examinee Name
+     - "Give Mark" Button:
+       - Opens a modal/page to view Google Docs link, notes, and input fields for marks and feedback.
+
+Additional Requirements:
+
+1. Validation:
+   - Add validation to all forms, including create and update assignment forms.
+
+2. Filter & Search:
+   - Implement filtering by difficulty level and a search feature on the Assignments page.
+
+3. JWT Authentication:
+   - Use JWT tokens for securing private routes.
+
+4. Theme Customization:
+   - Add a theme toggle button for dark/light mode.
+
+What to Submit:
+
+1. Live Site Link: Hosted client-side application.
+2. GitHub Repository:
+   - Server Repository
+   - Client Repository
+
+Optional (Highly Recommended):
+
+- Add a spinner during loading states.
+- Use animations (e.g., Framer Motion).
+- Implement API mutations with Tanstack Query.
+- Add one unique feature to differentiate your project.
+- Implement pagination on the Assignments page.
+
+Additional Guidelines:
+
+- Focus on functionality before styling.
+- Deploy server and client early.
+- Use ChatGPT for generating JSON data or other development assistance.
