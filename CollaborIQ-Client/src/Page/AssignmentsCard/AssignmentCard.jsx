@@ -68,75 +68,60 @@ const AssignmentCard = ({ assignment, onDelete }) => {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4 shadow-md">
+    <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4 shadow-md flex flex-col justify-between">
       {/* Image Section */}
-      <div className="bg-gray-100 dark:bg-gray-700 h-48 rounded-lg mb-4">
+      <div className="h-48 bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
         {thumbnailUrl ? (
           <img
             src={thumbnailUrl}
             alt={title}
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover"
           />
         ) : (
-          <div className="flex items-center justify-center h-full skeleton">
-            <span className="text-gray-500">No Image</span>
+          <div className="flex items-center justify-center h-full text-gray-500">
+            No Image
           </div>
         )}
       </div>
 
       {/* Content Section */}
-      <div>
+      <div className="flex flex-col gap-3">
         <h3 className="text-lg font-bold dark:text-white">{title}</h3>
-        <div className="flex justify-between my-3">
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Marks:{" "}
-            <span className="font-bold text-black dark:text-white">
-              {marks}
-            </span>
+        <div className="flex justify-between items-center text-sm">
+          <p className="text-gray-600 dark:text-gray-400">
+            Marks: <span className="font-bold text-black dark:text-white">{marks}</span>
           </p>
-
           <p
-            className={`text-sm font-medium mt-2 rounded-full py-1 px-4 text-white ${
-              difficulty === "Easy"
-                ? "bg-green-500"
-                : difficulty === "Medium"
+            className={`px-3 py-1 text-white rounded-full text-xs ${difficulty === "Easy"
+              ? "bg-green-500"
+              : difficulty === "Medium"
                 ? "bg-yellow-500"
                 : "bg-red-500"
-            }`}
+              }`}
           >
             {difficulty}
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-4 space-x-2">
-          {/* View Assignment */}
-          <Link to={`/details/${_id}`}>
-            <button
-              className="flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-lg font-medium transition hover:bg-blue-600"
-              title="View Assignment"
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-between gap-2 mt-2">
+          <Link to={`/details/${_id}`} className="w-full md:w-auto">
+            <button className="flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-lg font-medium transition hover:bg-blue-600 w-full">
               <Eye className="w-4 h-4 mr-2" />
               View
             </button>
           </Link>
 
-          {/* Update Assignment */}
-          <Link to={`/update-campaign/${_id}`}>
-            <button
-              className="flex items-center justify-center px-4 py-2 bg-yellow-500 text-white rounded-lg font-medium transition hover:bg-yellow-600"
-              title="Update Assignment"
-            >
+          <Link to={`/update-campaign/${_id}`} className="w-full md:w-auto">
+            <button className="flex items-center justify-center px-4 py-2 bg-yellow-500 text-white rounded-lg font-medium transition hover:bg-yellow-600 w-full">
               <Edit className="w-4 h-4 mr-2" />
               Update
             </button>
           </Link>
 
-          {/* Delete Assignment */}
           <button
             onClick={() => handleDelete(_id)}
-            className="flex items-center justify-center px-4 py-2 bg-red-500 text-white rounded-lg font-medium transition hover:bg-red-600"
-            title="Delete Assignment"
+            className="flex items-center justify-center px-4 py-2 bg-red-500 text-white rounded-lg font-medium transition hover:bg-red-600 w-full md:w-auto"
           >
             <Trash2 className="w-4 h-4 mr-2" />
             Delete

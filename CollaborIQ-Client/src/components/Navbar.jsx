@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthProvider";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const [activeTab, setActiveTab] = useState("register");
-  const activeStyle = "font-semibold text-darkGray dark:text-primary ";
+  const activeStyle = "font-semibold text-primary dark:text-primary ";
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -38,6 +38,14 @@ const Navbar = () => {
           className={({ isActive }) => (isActive ? activeStyle : "")}
         >
           Assignments
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? activeStyle : "")}
+        >
+          Contact
         </NavLink>
       </li>
 
@@ -94,7 +102,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 z-50 lg:px-8">
+    <div className="navbar bg-base-100 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex="0" role="button" className="btn btn-ghost lg:hidden">
@@ -213,22 +221,20 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link
               to="/login"
-              className={`${
-                activeTab === "login"
-                  ? "bg-primary text-white font-semibold"
-                  : "text-cyan-900"
-              } px-6 py-2 rounded-lg text-sm font-normal`}
+              className={`${activeTab === "login"
+                ? "bg-primary text-white font-semibold"
+                : "text-cyan-900"
+                } px-6 py-2 rounded-lg text-sm font-normal`}
               onClick={() => setActiveTab("login")}
             >
               Sign In
             </Link>
             <Link
               to="/register"
-              className={`${
-                activeTab === "register"
-                  ? "bg-primary text-white font-semibold"
-                  : "text-cyan-900"
-              } px-6 py-2 rounded-lg text-sm font-normal`}
+              className={`${activeTab === "register"
+                ? "bg-primary text-white font-semibold"
+                : "text-cyan-900"
+                } px-6 py-2 rounded-lg text-sm font-normal`}
               onClick={() => setActiveTab("register")}
             >
               Get Started

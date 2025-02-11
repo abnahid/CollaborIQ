@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Contact from "../components/Contact";
 import Assignments from "../Page/Assignments";
 import AssignmentDetails from "../Page/AssignmentsCard/AssignmentDetails";
 import CreateAssignments from "../Page/CreateAssignments";
@@ -32,6 +33,11 @@ const router = createBrowserRouter(
           element: <Assignments></Assignments>,
           loader: () =>
             fetch("https://collabor-iq-server.vercel.app/assignments"),
+        },
+        {
+          path: "/contact",
+          element: <Contact></Contact>,
+
         },
         {
           path: "/Details/:id",

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,7 +22,7 @@ const slidesData = [
     title: "Create and Manage Assignments",
     description:
       "Empower yourself to organize study tasks with ease. Our platform allows you to effortlessly create assignments, track progress, and grade your friends’ work.",
-    buttons: [{ text: "Start Assigning", style: "btn-primary" }],
+    buttons: [{ text: "Start Assigning", style: "btn-primary", link: "/create-assignments" }],
   },
   {
     image: "https://i.ibb.co/xh9ZJHn/banner3.jpg",
@@ -74,7 +75,10 @@ const HeroSection = () => {
                       whileTap={{ scale: 0.9 }}
                       className={`btn ${button.style} rounded-[4px] px-4 py-2 sm:px-6`}
                     >
-                      {button.text}
+                      <Link to={button.link}>
+                        {button.text}
+                      </Link>
+
                     </motion.button>
                   ))}
                 </div>

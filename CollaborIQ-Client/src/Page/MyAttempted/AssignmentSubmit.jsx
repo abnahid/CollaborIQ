@@ -52,7 +52,7 @@ const AssignmentSubmit = () => {
   };
 
   return (
-    <div className="card bg-base-100 w-full shadow-2xl">
+    <div className="card bg-base-100 w-full shadow-2xl p-8">
       <h1 className="text-5xl font-bold text-center">Submit Your Assignment</h1>
       <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">
@@ -79,7 +79,7 @@ const AssignmentSubmit = () => {
           ></textarea>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Submit Assignment</button>
+          <button className="btn bg-primary">Submit Assignment</button>
         </div>
       </form>
     </div>

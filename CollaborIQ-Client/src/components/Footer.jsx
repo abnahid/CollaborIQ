@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-10 w-11/12 mx-auto text-gray-800 dark:text-gray-200 mt-12">
+    <footer className="relative bg-gray-100 dark:bg-gray-900 rounded-2xl p-10 w-11/12 lg:w-full mx-auto text-gray-800 dark:text-gray-200 mt-12">
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
         {/* About Section */}
@@ -50,7 +50,7 @@ const Footer = () => {
               My Assignments
             </NavLink>
             <NavLink
-              to="/submitted-assignments"
+              to="/my-submissions"
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary link link-hover"
             >
               Submitted Assignments

@@ -15,14 +15,17 @@ const MainLayout = () => {
 
   return (
     <div>
-      <nav className="w-11/12 mx-auto py-1">
+      <nav className="w-11/12 mx-auto py-1 max-w-6xl">
         <Navbar />
       </nav>
       <div className="py-5">
         <div className="w-11/12 mx-auto max-w-6xl">
           <Outlet />
         </div>
-        <Footer />
+        <div className=" mx-auto max-w-6xl">
+          <Footer />
+        </div>
+
       </div>
     </div>
   );
