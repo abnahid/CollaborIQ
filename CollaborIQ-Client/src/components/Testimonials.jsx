@@ -3,37 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Marquee from "../hooks/marquee";
 import { cn } from "../utils/utils";
 
-// const reviews = [
-//   {
-//     _id: "67683f403b1a89d46a425956",
-//     name: "Jozef Albino", // spell-check-ignore-line
-//     age: "20 Years old",
-//     review:
-//       "This e-course really helped me develop my graphic design skills. The material was complete and the mentor was very supportive!",
-//     rating: 4.5,
-//     institution: "IAIN Surakarta", // spell-check-ignore-line
-//     img: "https://via.placeholder.com/32", // Placeholder image URL
-//   },
-//   {
-//     _id: "67683f403b1a89d46a425957",
-//     name: "Mark Benson",
-//     age: "22 Years old",
-//     review:
-//       "This e-course opened doors to new opportunities in the tech industry. Highly recommended!",
-//     rating: 4.8,
-//     institution: "Tech Academy",
-//     img: "https://via.placeholder.com/32", // Placeholder image URL
-//   },
-//   {
-//     _id: "67683f403b1a89d46a425958",
-//     name: "Alina Cruz", // spell-check-ignore-line
-//     age: "25 Years old",
-//     review: "Amazing content and mentors! I feel confident in my skills now.",
-//     rating: 4.7,
-//     institution: "Skill Booster",
-//     img: "https://via.placeholder.com/32", // Placeholder image URL
-//   },
-// ];
+
 
 const ReviewCard = ({ img, name, review, rating, institution }) => {
   return (
@@ -71,7 +41,7 @@ const ReviewCard = ({ img, name, review, rating, institution }) => {
 
 const Testimonials = () => {
   const reviews = useLoaderData();
-  const firstRow = reviews.slice(0, reviews.length / 3);
+  const firstRow = reviews.slice(0, reviews.length);
 
   return (
     <div className="bg-white dark:bg-gray-900 py-12">

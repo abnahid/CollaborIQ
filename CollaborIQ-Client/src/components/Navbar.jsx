@@ -48,6 +48,14 @@ const Navbar = () => {
           Contact
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/about-us"
+          className={({ isActive }) => (isActive ? activeStyle : "")}
+        >
+          About
+        </NavLink>
+      </li>
 
       {user?.email && (
         <>
