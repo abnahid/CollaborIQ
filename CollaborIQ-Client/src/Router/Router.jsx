@@ -7,6 +7,7 @@ import CreateAssignments from "../Page/CreateAssignments";
 import FeedbackForm from "../Page/FeedbackForm/FeedbackForm";
 import Home from "../Page/Home";
 import Login from "../Page/Login";
+import MyAssignment from "../Page/MyAssignment/MyAssignment";
 import AssignmentSubmit from "../Page/MyAttempted/AssignmentSubmit";
 import MySubmissions from "../Page/MyAttempted/MySubmissions";
 import PendingAssignment from "../Page/Pending-Assignment/PendingAssignment";
@@ -32,6 +33,12 @@ const router = createBrowserRouter(
         {
           path: "/assignments",
           element: <Assignments></Assignments>,
+          loader: () =>
+            fetch("https://collabor-iq-server.vercel.app/assignments"),
+        },
+        {
+          path: "/my-assignments",
+          element: <MyAssignment></MyAssignment>,
           loader: () =>
             fetch("https://collabor-iq-server.vercel.app/assignments"),
         },

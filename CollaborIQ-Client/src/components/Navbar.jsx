@@ -88,6 +88,14 @@ const Navbar = () => {
             <ul className="dropdown-content menu shadow bg-base-100 rounded-box w-52 z-50">
               <li>
                 <NavLink
+                  to="/my-assignments"
+                  className={({ isActive }) => (isActive ? activeStyle : "")}
+                >
+                  My Assignments
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/my-submissions"
                   className={({ isActive }) => (isActive ? activeStyle : "")}
                 >
