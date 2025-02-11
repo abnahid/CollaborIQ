@@ -72,7 +72,7 @@ const CallToAction = () => {
           {/* Call to Action */}
           <div className="mt-10 md:mt-0">
             <Link
-              to="/signup"
+              to="/register"
               title="Get started now"
               className="inline-flex items-center justify-center px-9 py-3.5 text-base font-bold text-gray-900 transition-all duration-200 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:bg-opacity-90 rounded-xl"
             >

@@ -38,7 +38,7 @@ const Footer = () => {
               View Assignments
             </NavLink>
             <NavLink
-              to="/create-assignment"
+              to="/create-assignments"
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary link link-hover"
             >
               Create an Assignment

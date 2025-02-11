@@ -79,7 +79,7 @@ const AssignmentSubmit = () => {
           ></textarea>
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-primary">Submit Assignment</button>
+          <button className="btn bg-primary hover:bg-primary text-white">Submit Assignment</button>
         </div>
       </form>
     </div>

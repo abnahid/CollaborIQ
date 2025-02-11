@@ -15,16 +15,26 @@ const CreateAssignments = () => {
     const form = new FormData(e.target);
     const title = form.get("title");
     const description = form.get("description");
-    const marks = form.get("marks");
+    const marks = parseInt(form.get("marks"), 100);
     const thumbnailUrl = form.get("thumbnailUrl");
     const difficulty = form.get("difficulty");
     const userEmail = form.get("userEmail");
     const userName = form.get("userName");
 
+    if (marks > 100) {
+      Swal.fire({
+        title: "Invalid Marks",
+        text: "Marks cannot be greater than 100!",
+        icon: "error",
+        confirmButtonText: "Okay",
+      });
+      return;
+    }
+
     const newAssignment = {
       title,
       description,
-      marks: parseInt(marks, 100),
+      marks,
       thumbnailUrl,
       difficulty,
       dueDate,
